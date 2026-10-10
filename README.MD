@@ -21,5 +21,13 @@ It also updates Docker WSL and installs the devcontainer extension in VSCode.
 3. **Build the Container:** Press `Ctrl + Shift + P` (Windows) or `Cmd + Shift + P` (Mac) to open the Command Palette. Type **Dev Containers: Reopen in Container** and press Enter. 
    *(Note: The very first time you do this, it will take a 5-10 minutes to download the tools, Linux Image and build the environment).*
 4. **Open the Terminal:** Once VS Code has reloaded and is connected, go to the top menu and select **Terminal > New Terminal** (or use the shortcut `Ctrl + ~`).
-5. **Start the AI Agent:** In the terminal, simply type `vibe` and press Enter. You are now ready to code with the Mistral agent!
-6. **Enter your API Key:** Because this is your first time starting the agent, it will prompt you for an API key. Paste the key provided by your teacher (via Canvas/Teams) and press Enter.
+
+## Step 3: Run the AI for the first time
+Before starting the AI agent, you need to provide your personal access key. This ensures the environment can connect to the AI models via our class Portkey gateway.
+
+1. In the root folder of this project, you find the file `.env.example`.Rename it to '.env'
+2. Paste the API key provided by your teacher into this file using the following format:
+   ```text
+   PORTKEY_API_KEY=<provided key>
+3. **Start the AI Agent:** In the terminal, simply type `vibe` and press Enter. You are now ready to code with the Mistral agent!
+4. **Enter your API Key:** Because this is your first time starting the agent, it will prompt you for an API key. Paste the key provided by your teacher (via Canvas/Teams) and press Enter.

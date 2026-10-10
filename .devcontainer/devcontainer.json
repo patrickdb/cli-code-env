@@ -27,5 +27,5 @@
       ]
     }
   },
-  "postCreateCommand": "npm install -g typescript tsx @angular/cli && curl -LsSf https://mistral.ai/vibe/install.sh | bash"
+  "postCreateCommand": "npm install -g typescript tsx @angular/cli && curl -LsSf https://mistral.ai/vibe/install.sh | bash && mkdir -p ~/.config/vibe && echo '[[providers]]\nname = \"portkey\"\napi_base = \"https://api.portkey.ai/v1\"\napi_key_env_var = \"PORTKEY_API_KEY\"\napi_style = \"openai\"\nbackend = \"generic\"' > ~/.config/vibe/config.toml"
 }
