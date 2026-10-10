@@ -15,17 +15,19 @@
     }
   },
   "customizations": {
-    "vscode": {
+  "vscode": {
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash"
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.cwd": "${workspaceFolder}/sandbox"
       },
       "extensions": [
         "ms-azuretools.vscode-docker",
         "vscjava.vscode-java-pack",
         "dbaeumer.vscode-eslint",
-        "Angular.ng-template"
+        "Angular.ng-template",
+        "vscjava.vscode-spring-boot-pack"
       ]
     }
   },
-  "postCreateCommand": "npm install -g typescript tsx @angular/cli && curl -LsSf https://mistral.ai/vibe/install.sh | bash && mkdir -p ~/.config/vibe && echo '[[providers]]\nname = \"portkey\"\napi_base = \"https://api.portkey.ai/v1\"\napi_key_env_var = \"PORTKEY_API_KEY\"\napi_style = \"openai\"\nbackend = \"generic\"' > ~/.config/vibe/config.toml"
+  "postCreateCommand": "mkdir -p sandbox && npm install -g typescript tsx @angular/cli && mkdir -p $HOME/.config/vibe && cp .devcontainer/vibe_config.toml $HOME/.config/vibe/config.toml && curl -LsSf https://mistral.ai/vibe/install.sh | bash"
 }
