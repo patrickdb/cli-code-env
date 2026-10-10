@@ -29,5 +29,5 @@ Before starting the AI agent, you need to provide your personal access key. This
 2. Paste the API key provided by your teacher into this file using the following format:
    ```text
    PORTKEY_API_KEY=<provided key>
-3. **Start the AI Agent:** In the terminal, simply type `vibe` and press Enter. You are now ready to code with the Mistral agent!
-4. **Enter your API Key:** Because this is your first time starting the agent, it will prompt you for an API key. Paste the key provided by your teacher (via Canvas/Teams) and press Enter.
+3. copy via the terminal the .env with: cp .env ~/.vibe/. 
+3. **Start the AI Agent:** In the terminal go to your sandbox, simply type `vibe` and press Enter. You are now ready to code with the Mistral agent!
