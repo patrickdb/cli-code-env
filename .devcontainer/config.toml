@@ -1,6 +1,17 @@
+theme = "auto"
+active_model = "Sonnet 5.5"
+
 [[providers]]
 name = "portkey"
 api_base = "https://api.portkey.ai/v1"
-api_key_env_var = "PORTKEY_API_KEY"
+api_key_env_var = "MISTRAL_API_KEY"
 api_style = "openai"
 backend = "generic"
+
+[[models]]
+name = "fontys-claude-sonnet-5-5"
+provider = "portkey"
+alias = "Sonnet 5.5"
+input_price = 0.0
+output_price = 0.0
+temperature = 1.0

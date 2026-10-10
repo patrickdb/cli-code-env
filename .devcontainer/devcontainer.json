@@ -29,5 +29,5 @@
       ]
     }
   },
-  "postCreateCommand": "mkdir -p sandbox && npm install -g typescript tsx @angular/cli && mkdir -p $HOME/.config/vibe && cp .devcontainer/config.toml $HOME/.config/vibe/config.toml && curl -LsSf https://mistral.ai/vibe/install.sh | bash"
+  "postCreateCommand": "mkdir -p sandbox && npm install -g typescript tsx @angular/cli && mkdir -p $HOME/.vibe && cp .devcontainer/config.toml $HOME/.vibe/config.toml && curl -LsSf https://mistral.ai/vibe/install.sh | bash"
 }
