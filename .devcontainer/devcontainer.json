@@ -1,0 +1,31 @@
+{
+  "name": "FSD AI Coding Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "mycoder",
+  "features": {
+    "ghcr.io/devcontainers/features/node:2.1.1": {
+      "version": "20",
+      "nodeGypDependencies": true
+    },
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21",
+      "jdkType": "default"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "vscjava.vscode-java-pack",
+        "dbaeumer.vscode-eslint",
+        "Angular.ng-template"
+      ]
+    }
+  },
+  "postCreateCommand": "npm install -g typescript tsx @angular/cli && curl -LsSf https://mistral.ai/vibe/install.sh | bash"
+}

@@ -1,0 +1,23 @@
+FROM mcr.microsoft.com/devcontainers/base:debian
+
+# Create the custom mycoder user
+RUN useradd -m -s /bin/bash mycoder \
+    && echo "mycoder ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+# Ensure the mycoder user owns their home directory for local package installs
+RUN chown -R mycoder:mycoder /home/mycoder
+
+# Install basic utilities and build dependencies
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -y install --no-install-recommends \
+    curl \
+    git \
+    nano \
+    wget \
+    ca-certificates \
+    gnupg \
+    python3 \
+    make \
+    g++ \
+    pkg-config \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
