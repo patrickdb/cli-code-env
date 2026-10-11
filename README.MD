@@ -12,7 +12,7 @@ It also updates Docker WSL and installs the devcontainer extension in VSCode.
 
 1. Right-click your Start button and open **Terminal (Admin)** or **Windows PowerShell (Admin)**.
 2. Run the included setup script by pasting this command:
-   .\setup.ps1
+   .\setup.cmd
 
 ## Step 2: Start the Environment
 1. **Start Docker:** Ensure Docker Desktop is running in the background 
@@ -25,9 +25,10 @@ It also updates Docker WSL and installs the devcontainer extension in VSCode.
 ## Step 3: Run the AI for the first time
 Before starting the AI agent, you need to provide your personal access key. This ensures the environment can connect to the AI models via our class Portkey gateway.
 
-1. In the root folder of this project, you find the file `.env.example`.Rename it to '.env'
+1. In the root folder of this project, you find the file `.env.example`. Rename it to `.env`.
 2. Paste the API key provided by your teacher into this file using the following format:
    ```text
-   PORTKEY_API_KEY=<provided key>
-3. copy via the terminal the .env with: cp .env ~/.vibe/. 
-3. **Start the AI Agent:** In the terminal go to your sandbox, simply type `vibe` and press Enter. You are now ready to code with the Mistral agent!
+   MISTRAL_API_KEY=<provided key>
+   ```
+3. Copy the `.env` into the Vibe config folder via the terminal with: `cp .env ~/.vibe/`.
+4. **Start the AI Agent:** In the terminal go to your sandbox, simply type `vibe` and press Enter. You are now ready to code with the Mistral agent!
