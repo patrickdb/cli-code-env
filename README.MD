@@ -10,8 +10,9 @@ This step will install the necessary thing to get started with the environment.
 It will, if needed, install the VSCode and Docker.
 It also updates Docker WSL and installs the devcontainer extension in VSCode. 
 
-1. Right-click your Start button and open **Terminal (Admin)** or **Windows PowerShell (Admin)**.
-2. Run the included setup script by pasting this command:
+1. Make sure you have enough diskspace on your system 
+2. Right-click your Start button and open **Terminal (Admin)** or **Windows PowerShell (Admin)**.
+3. Run the included setup script by pasting this command:
    .\setup.cmd
 
 ## Step 2: Start the Environment
@@ -23,7 +24,7 @@ It also updates Docker WSL and installs the devcontainer extension in VSCode.
 4. **Open the Terminal:** Once VS Code has reloaded and is connected, go to the top menu and select **Terminal > New Terminal** (or use the shortcut `Ctrl + ~`).
 
 ## Step 3: Run the AI for the first time
-Before starting the AI agent, you need to provide your personal access key. This ensures the environment can connect to the AI models via our class Portkey gateway.
+Before starting the AI agent, you need to provide your personal access key. This ensures the environment can connect to the AI models via our class Portkey gateway. For students you can generate your own key via https://padmin.fontysict.nl/self-service
 
 1. In the root folder of this project, you find the file `.env.example`. Rename it to `.env`.
 2. Paste the API key provided by your teacher into this file using the following format:
@@ -32,3 +33,7 @@ Before starting the AI agent, you need to provide your personal access key. This
    ```
 3. Copy the `.env` into the Vibe config folder via the terminal with: `cp .env ~/.vibe/`.
 4. **Start the AI Agent:** In the terminal go to your sandbox, simply type `vibe` and press Enter. You are now ready to code with the Mistral agent!
+
+# Troubleshooting
+1. Do restart your system if asked for. Especially after Docker updates are important to have your system restarted.
+2. Troubles starting the Docker Daemon from within VSCode -> Check if WSL integration is enabled in VMWare resource of Docker
