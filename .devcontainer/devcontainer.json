@@ -5,7 +5,7 @@
   },
   "remoteUser": "mycoder",
   "features": {
-    "ghcr.io/devcontainers/features/node:2.1.1": {
+    "ghcr.io/devcontainers/features/node:2.1.2": {
       "version": "20",
       "nodeGypDependencies": true
     },
